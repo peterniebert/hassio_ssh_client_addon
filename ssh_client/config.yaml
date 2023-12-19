@@ -1,7 +1,7 @@
 ---
 name: SSH Client
 version: dev
-slug: ssh-client
+slug: ssh_client
 description: SSH client connection to remote servers for tunnelling
 url: https://github.com/peterniebert/hassio_ssh_client_addon
 codenotary: peter.niebert@univ-amu.fr
