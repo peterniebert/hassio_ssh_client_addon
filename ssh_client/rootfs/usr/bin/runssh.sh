@@ -11,7 +11,7 @@
 # RUN LOGIC
 # ------------------------------------------------------------------------------
 main() {
-
+    export HOME=/root
     bashio::log.info "Install private key from config"
     mkdir -p /root/.ssh
     echo  $(bashio::config 'ssh_private_key') > /root/.ssh/mykey
