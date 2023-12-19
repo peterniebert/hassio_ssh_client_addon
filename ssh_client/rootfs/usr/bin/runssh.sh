@@ -14,12 +14,13 @@ main() {
 
     bashio::log.info "Install private key from config"
 
-    echo  $(bashio::config 'ssh_private_key') > /etc/ssh/private_key
+    echo  $(bashio::config 'ssh_private_key') > /root/.ssh/mykey
+    echo  $(bashio::config 'ssh_server_public_key') > /root/.ssh/known_hosts
 
 
     while true; do
         bashio::log.info "starting ssh client"
-        /usr/bin/ssh -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" -o ExitOnForwardFailure=yes   $(bashio::config 'ssh_more_args') $(bashio::config 'ssh_remote_url') -N -p $(bashio::config 'ssh_remote_port') -i /etc/ssh/private_key
+        /usr/bin/ssh -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" -o ExitOnForwardFailure=yes   $(bashio::config 'ssh_more_args') $(bashio::config 'ssh_remote_url') -N -p $(bashio::config 'ssh_remote_port') -i /root/.ssh/mykey
     done
 }
 main "$@"

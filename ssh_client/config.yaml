@@ -11,12 +11,14 @@ arch:
   - armv7
 options:
   log_level: info
-  ssh_private_key: <generate_elsewhere_rsa_discouraged>
+  ssh_private_key: <paste private client key here>
+  ssh_server_public_key: <paste public host key here>
   ssh_remote_url: <user@hostname>
   ssh_remote_port: 22
   ssh_more_args: -R8433:core-nginx-proxy:443
 schema:
   ssh_private_key: str
+  ssh_server_public_key: str
   ssh_remote_port: int(1,65535)
   ssh_remote_url: str
   ssh_more_args: str
