@@ -1,0 +1,23 @@
+---
+name: SSH Client
+version: dev
+slug: ssh-client
+description: SSH client connection to remote servers for tunnelling
+url: https://github.com/peterniebert/hassio_ssh_client_addon
+codenotary: peter.niebert@univ-amu.fr
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armv7
+options:
+  log_level: info
+  ssh_private_key: <generate_elsewhere_rsa_discouraged>
+  ssh_remote_url: <user@hostname>
+  ssh_remote_port: 22
+  ssh_more_args: -R8433:core-nginx-proxy:443
+schema:
+  log_level: list(trace|debug|info|notice|warning|error|fatal)
+  ssh_remote_port: int(1,65535)
+  ssh_remote_url: string
+  ssh_more_args: string

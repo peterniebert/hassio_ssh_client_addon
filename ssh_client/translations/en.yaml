@@ -1,0 +1,14 @@
+---
+configuration:
+  ssh_private_key:
+    name: SSH private key
+    description: The key for authentifying to remote server
+  ssh_remote_url:
+    name: SSH remote url
+    description: The remote URL (e.g. peter@myremoteserver.com) used for the ssh connection.
+  ssh_remote_port:
+    name: SSH remote port
+    description: The remote port number used for the ssh connection.
+  ssh_more_args:
+    name: Additional SSH arguments
+    description: Put ssh command line arguments here that are not covered by the addon yet.
