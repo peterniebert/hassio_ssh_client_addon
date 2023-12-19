@@ -9,7 +9,7 @@ COPY rootfs /
 RUN apk add --no-cache \
     coreutils=9.4-r1 \
     wget=1.21.4-r0 \
-    openssh-client=8.6_p1-r3
+    openssh-client-default=9.6_p1-r0
 
 # Build arguments
 ARG BUILD_ARCH
