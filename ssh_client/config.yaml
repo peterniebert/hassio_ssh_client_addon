@@ -3,7 +3,7 @@ name: SSH Client
 version: dev
 slug: ssh_client
 description: SSH client connection to remote servers for tunnelling
-url: https://github.com/peterniebert/hassio_ssh_client_addon
+url: https://github.com/peterniebert/hassio_ssh_client_addon/ssh_client
 codenotary: peter.niebert@univ-amu.fr
 init: false
 arch:
