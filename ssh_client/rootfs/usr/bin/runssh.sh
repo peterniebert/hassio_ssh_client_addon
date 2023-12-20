@@ -21,7 +21,8 @@ main() {
 
     while true; do
         bashio::log.info "starting ssh client"
-        /usr/bin/ssh -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" -o ExitOnForwardFailure=yes   $(bashio::config 'ssh_more_args') $(bashio::config 'ssh_remote_url') -N -p $(bashio::config 'ssh_remote_port') -i /root/.ssh/mykey
+        echo /usr/bin/ssh -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" -o ExitOnForwardFailure=yes   $(bashio::config 'ssh_more_args') $(bashio::config 'ssh_remote_url') -N -p $(bashio::config 'ssh_remote_port') -i /root/.ssh/mykey
+        sleep 5
     done
 }
 main "$@"
