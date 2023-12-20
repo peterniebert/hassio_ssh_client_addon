@@ -6,7 +6,7 @@ url: https://github.com/peterniebert/hassio_ssh_client_addon/ssh_client
 codenotary: peter.niebert@univ-amu.fr
 init: false
 map: 
-  - addon-config:rw
+  - addon_config:rw
 arch:
   - aarch64
   - amd64
