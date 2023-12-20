@@ -1,5 +1,5 @@
 name: SSH Client
-version: dev-0.10
+version: dev-0.11
 slug: ssh_client
 description: SSH client connection to remote servers for tunnelling
 url: https://github.com/peterniebert/hassio_ssh_client_addon/ssh_client
@@ -15,14 +15,12 @@ arch:
   - armv7
 options:
   log_level: info
-  ssh_private_key: <paste private client key here>
-  ssh_server_public_key: <paste public host key here>
+  ssh_private_key: mykey
   ssh_remote_url: <user@hostname>
   ssh_remote_port: 22
   ssh_more_args: -R8433:core-nginx-proxy:443
 schema:
   ssh_private_key: str
-  ssh_server_public_key: str
   ssh_remote_port: int(1,65535)
   ssh_remote_url: str
   ssh_more_args: str
