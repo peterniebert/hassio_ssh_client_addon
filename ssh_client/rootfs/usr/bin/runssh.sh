@@ -22,7 +22,7 @@ main() {
     server_url=$(bashio::config 'ssh_remote_url')
     server_port=$(bashio::config 'ssh_remote_port')
     bashio::log.info "starting ssh client"
-    echo /usr/bin/ssh -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" -o ExitOnForwardFailure=yes   $more_args $server_url -N -p $server_port -i /root/.ssh/mykey
-    /usr/bin/ssh -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" -o ExitOnForwardFailure=yes   $more_args $server_url -N -p $server_port -i /root/.ssh/mykey
+    echo /usr/bin/ssh -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" -o ExitOnForwardFailure=yes   $more_args $server_url -p $server_port -i /root/.ssh/mykey
+    /usr/bin/ssh -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" -o ExitOnForwardFailure=yes   $more_args $server_url -p $server_port -i /root/.ssh/mykey
 }
 main "$@"
